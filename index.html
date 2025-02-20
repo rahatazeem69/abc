@@ -1,11 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Complete Navigation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: beige;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-image: url(bg-image.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            background-color: red;
+            color: white;
+        }
+
+        .logo {
+            letter-spacing: 2px;
+            font-size: 2rem;
+            margin: 3px 10px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: flex-end;
+            font-weight: bolder
+        }
+
+        .links a {
+            margin: 10px 12px;
+        }
+
+        .links a:hover {
+            color: blue;
+            cursor: pointer;
+            transition: ease;
+        }
+
+        .toggle_checkbox {
+            display: none;
+        }
+
+        .toggle_btn {
+            display: none;
+        }
+        section{
+             margin: 20px;
+        }
+        section h2{
+            margin-bottom: 15px;
+        }
+        section h2 span{
+            color: rgb(40, 156, 151);
+        }
+        section p{
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        section .social-icons{
+            display: flex;
+            justify-content: center;
+            margin-top: 210px;
+        }
+        section .social-icons a{
+            margin: 0px 30px;
+            font-size: 30px;
+        }
+        section .social-icons a:hover{
+            color: aqua;
+            cursor: pointer;
+        }
+        @media(max-width: 700px) {
+            .links{
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 45px;
+                left: 0px;
+                right: 0px;
+                background-color: lightcoral;
+            }
+            .toggle_btn{
+                display: block;
+                font-size: 20px;
+                font-weight: 600;
+            }
+            .toggle_checkbox:checked + .toggle_btn + .links{
+                display: flex;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2>made a new branch</h2>
+    <header>
+    <div class="container">
+        <h2 class="logo">My Website</h2>
+        <input type="checkbox" class="toggle_checkbox" id="toggle">
+        <label for="toggle" class="toggle_btn">&#9776;</label>
+        <div class="links">
+            <a>Home</a>
+            <a>About</a>
+            <a>Project</a>
+            <a>Services</a>
+            <a>Achievements</a>
+        </div>
+    </div>
+</header>
+    <section>
+        <h2>Welcome to Developer's World<br><span>Design By Developers!</span></h2><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit similique inventore consectetur quis tenetur nisi soluta neque aut fuga suscipit dolores facere reprehenderit vel alias necessitatibus totam mollitia natus dolore repellendus fugiat laborum non doloremque, modi obcaecati. Alias beatae molestiae repellendus. Illum tenetur exercitationem veritatis eos et, est possimus. Itaque ex sunt quaerat dolor iste quis? Ab deleniti, nulla consectetur molestias, ducimus iusto esse commodi suscipit voluptate magnam eum, alias aspernatur! Possimus repellat libero repudiandae minima obcaecati debitis laudantium, quos impedit quia ipsam fugiat quo maxime? Obcaecati voluptatibus reiciendis veritatis optio. Aperiam quam aliquid aliquam qui reiciendis saepe mollitia dignissimos fugit voluptates nulla reprehenderit incidunt ipsum laudantium in eaque, atque repellat excepturi facilis alias? Accusamus blanditiis fugiat voluptas laboriosam enim consectetur perspiciatis. Magni qui aliquam nihil hic officia esse aperiam libero error suscipit eligendi! Pariatur minima at et accusamus itaque.</p>
+        <a>Read More</a>
+        <div class="social-icons">
+        <a><i class="fab fa-facebook-f"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+    </div>
+    </section>
 </body>
+
 </html>
